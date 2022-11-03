@@ -3,6 +3,8 @@ import Homepage from './components/homepage';
 import Menu from './components/menu';
 import Contact from './components/contact';
 import { destroy } from './helpers/dom';
+// TODO: import css and inject as stylesheet rather than tag
+import './styles/globals.css';
 
 const contentNode = document.getElementById('content');
 
