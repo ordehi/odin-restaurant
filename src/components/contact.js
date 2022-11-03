@@ -32,6 +32,8 @@ const Contact = (contentNode) => {
   container.append(heading, tag, address);
 
   contentNode.appendChild(container);
+
+  return container;
 };
 
 export default Contact;

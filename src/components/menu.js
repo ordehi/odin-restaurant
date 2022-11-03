@@ -47,6 +47,8 @@ const Menu = (contentNode, menuData = sampleMenu) => {
   }
 
   contentNode.appendChild(container);
+
+  return container;
 };
 
 export default Menu;

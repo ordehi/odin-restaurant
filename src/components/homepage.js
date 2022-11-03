@@ -16,6 +16,8 @@ const Homepage = (contentNode) => {
   container.appendChild(myPirate);
 
   contentNode.appendChild(container);
+
+  return container;
 };
 
 export default Homepage;
