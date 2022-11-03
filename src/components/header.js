@@ -7,7 +7,7 @@ const Header = (contentNode, navData = sampleNav) => {
 
   const heading = createElement('h1', 'The Savory Pirate');
   const tagline = createElement('p', 'A delightful journey through aaaagh!');
-  const nav = createElement('nav', undefined, { id: 'navbar' });
+  const nav = createElement('nav', undefined, { class: 'navbar' });
 
   const ul = createElement('ul', undefined, { class: 'navlist' });
   navData.map((item) => {
