@@ -1,6 +1,9 @@
 @import 'normalize.css';
 
-
+@font-face {
+  font-family: "argh";
+  src: url("../fonts/argh.ttf") format("truetype");
+}
 
 /* *, *::before, *::after {
   box-sizing: border-box;
@@ -16,6 +19,7 @@ body {
 
 #content {
   margin: 0 auto;
+  text-align: center;
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
 }
@@ -40,6 +44,8 @@ body::before {
 
 h1 {
   margin: 0;
+  font-size: 3rem;
+  font-family: "argh";
 }
 
 .navbar {
@@ -60,5 +66,4 @@ h1 {
 .container {
   display: grid;
   justify-items: center;
-  text-align: center;
 }

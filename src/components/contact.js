@@ -1,6 +1,6 @@
 import { createElement } from '../helpers/dom';
 
-const Contact = (contentNode) => {
+const Contact = () => {
   const container = createElement(
     'div',
     undefined,
@@ -30,8 +30,6 @@ const Contact = (contentNode) => {
   address.append(mailAnchor, breakLine, phoneAnchor);
 
   container.append(heading, tag, address);
-
-  contentNode.appendChild(container);
 
   return container;
 };

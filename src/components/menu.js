@@ -16,7 +16,7 @@ const sampleMenu = {
   ],
 };
 
-const Menu = (contentNode, menuData = sampleMenu) => {
+const Menu = (menuData = sampleMenu) => {
   const container = createElement(
     'div',
     undefined,
@@ -45,8 +45,6 @@ const Menu = (contentNode, menuData = sampleMenu) => {
 
     container.appendChild(catNode);
   }
-
-  contentNode.appendChild(container);
 
   return container;
 };

@@ -11,3 +11,8 @@ export const createElement = (tag, content, ...attrs) => {
 };
 
 export const destroy = (node) => node.remove();
+
+export const replaceActive = (parent, newActive, active) => {
+  parent.replaceChild(newActive, active);
+  return newActive;
+};

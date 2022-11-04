@@ -2,11 +2,11 @@ import { createElement } from '../helpers/dom';
 
 const sampleNav = ['Home', 'Menu', 'Contact'];
 
-const Header = (contentNode, navData = sampleNav) => {
+const Header = (navData = sampleNav) => {
   const container = createElement('header', undefined, { id: 'header' });
 
-  const heading = createElement('h1', 'The Savory Pirate');
-  const tagline = createElement('p', 'A delightful journey through aaaagh!');
+  const heading = createElement('h1', 'The Plank');
+  const tagline = createElement('p', 'A delightful plunge into aaaagh!');
   const nav = createElement('nav', undefined, { class: 'navbar' });
 
   const ul = createElement('ul', undefined, { class: 'navlist' });
@@ -25,7 +25,8 @@ const Header = (contentNode, navData = sampleNav) => {
   nav.appendChild(ul);
 
   container.append(heading, nav, tagline);
-  contentNode.appendChild(container);
+
+  return container;
 };
 
 export default Header;

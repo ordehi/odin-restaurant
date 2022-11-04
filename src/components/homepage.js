@@ -1,7 +1,7 @@
 import { createElement } from '../helpers/dom';
 import Pirate from '../images/pirate.jpg';
 
-const Homepage = (contentNode) => {
+const Homepage = () => {
   const container = createElement(
     'div',
     undefined,
@@ -14,8 +14,6 @@ const Homepage = (contentNode) => {
   myPirate.alt = 'a pirate leading a ship';
 
   container.appendChild(myPirate);
-
-  contentNode.appendChild(container);
 
   return container;
 };

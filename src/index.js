@@ -3,37 +3,35 @@ import Footer from './components/footer';
 import Homepage from './components/homepage';
 import Menu from './components/menu';
 import Contact from './components/contact';
-import { destroy } from './helpers/dom';
+import { replaceActive } from './helpers/dom';
 // TODO: import css and inject as stylesheet rather than tag
 import './styles/globals.css';
 
 const contentNode = document.getElementById('content');
 
 const App = () => {
-  Header(contentNode);
-  let active = Homepage(contentNode);
+  let active = Homepage();
+  contentNode.append(Header(), active, Footer());
 
   // TODO: implement better, extensible routing
   document.addEventListener('click', (e) => {
     let route = e.target.dataset.route;
     if (route) {
-      destroy(active);
       switch (route) {
         case 'home':
-          active = Homepage(contentNode);
+          active = replaceActive(contentNode, Homepage(), active);
           break;
         case 'menu':
-          active = Menu(contentNode);
+          active = replaceActive(contentNode, Menu(), active);
           break;
         case 'contact':
-          active = Contact(contentNode);
+          active = replaceActive(contentNode, Contact(), active);
           break;
         default:
           break;
       }
     }
   });
-  Footer(contentNode);
 };
 
 App();
