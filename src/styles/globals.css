@@ -11,12 +11,13 @@
 
 :root {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --rugged-brown: #795548;
+  --rugged-blue: #dfe9fe;
 }
 
 body {
   min-height: 100vh;
-  background: no-repeat url("../images/water.jpg");
+  background-color: #0466c8;
+  /* background: no-repeat url("../images/water.jpg"); */
 }
 
 #content {
@@ -66,11 +67,11 @@ h1 {
 .list-link, .category-title {
   font-family: 'argh';
   font-size: 2rem;
-  color: var(--rugged-brown);
+  color: var(--rugged-blue);
 }
 
 .list-link.active {
-  color: blue;
+  color: #ffe2e0;
 }
 
 .container {
