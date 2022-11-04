@@ -12,12 +12,13 @@ const Header = (navData = sampleNav) => {
   const ul = createElement('ul', undefined, { class: 'navlist' });
   navData.map((item) => {
     let li = createElement('li', undefined, { class: 'list-item' });
+    let routeName = item.toLowerCase();
     let anchor = createElement(
       'a',
       item,
       { class: 'list-link' },
       { href: '#' },
-      { 'data-route': item.toLowerCase() }
+      { 'data-route': routeName }
     );
     li.appendChild(anchor);
     ul.appendChild(li);

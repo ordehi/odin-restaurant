@@ -9,27 +9,31 @@ import './styles/globals.css';
 
 const contentNode = document.getElementById('content');
 
+const routes = {
+  home: Homepage(),
+  menu: Menu(),
+  contact: Contact(),
+};
+
 const App = () => {
-  let active = Homepage();
-  contentNode.append(Header(), active, Footer());
+  let currRoute = 'home';
+  let activeNode = routes[currRoute];
+  contentNode.append(Header(), activeNode, Footer());
+  let currRouteLink = document.querySelector(`[data-route="${currRoute}"]`);
+  currRouteLink.classList.add('active');
 
   // TODO: implement better, extensible routing
   document.addEventListener('click', (e) => {
-    let route = e.target.dataset.route;
-    if (route) {
-      switch (route) {
-        case 'home':
-          active = replaceActive(contentNode, Homepage(), active);
-          break;
-        case 'menu':
-          active = replaceActive(contentNode, Menu(), active);
-          break;
-        case 'contact':
-          active = replaceActive(contentNode, Contact(), active);
-          break;
-        default:
-          break;
-      }
+    let prevRoute = currRoute;
+    currRoute = e.target.dataset.route;
+
+    if (currRoute && currRoute !== prevRoute) {
+      activeNode = replaceActive(contentNode, routes[currRoute], activeNode);
+
+      let prevRouteLink = currRouteLink;
+      currRouteLink = e.target;
+      currRouteLink.classList.toggle('active');
+      prevRouteLink.classList.toggle('active');
     }
   });
 };

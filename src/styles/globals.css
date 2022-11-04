@@ -69,6 +69,10 @@ h1 {
   color: var(--rugged-brown);
 }
 
+.list-link.active {
+  color: blue;
+}
+
 .container {
   display: grid;
   justify-items: center;
