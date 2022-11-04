@@ -11,35 +11,31 @@
 
 :root {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --rugged-brown: #795548;
 }
 
 body {
   min-height: 100vh;
+  background: no-repeat url("../images/water.jpg");
 }
 
 #content {
-  margin: 0 auto;
-  text-align: center;
   display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 header {
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
   justify-items: center;
+  padding-block: 1rem;
 }
 
-body::before {
-  content: '';
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
-  z-index: -1;
-  opacity: .6;  
-  background: no-repeat url("../images/water.jpg");
+header p { 
+  font-size: 1.2rem;
 }
 
 h1 {
@@ -59,11 +55,30 @@ h1 {
   padding-left: 0;
 }
 
+.list-item {
+  padding-inline: 1rem;
+}
+
 .list-link {
   text-decoration: none;
+}
+
+.list-link, .category-title {
+  font-family: 'argh';
+  font-size: 2rem;
+  color: var(--rugged-brown);
 }
 
 .container {
   display: grid;
   justify-items: center;
+}
+
+.dish {
+  display: flex;
+  width: clamp(300px, 40vw, 600px);
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
 }
