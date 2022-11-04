@@ -1,4 +1,5 @@
 import Header from './components/header';
+import Footer from './components/footer';
 import Homepage from './components/homepage';
 import Menu from './components/menu';
 import Contact from './components/contact';
@@ -32,6 +33,7 @@ const App = () => {
       }
     }
   });
+  Footer(contentNode);
 };
 
 App();

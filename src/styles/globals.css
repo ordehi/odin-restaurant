@@ -1,5 +1,7 @@
 @import 'normalize.css';
 
+
+
 /* *, *::before, *::after {
   box-sizing: border-box;
 } */
@@ -14,17 +16,17 @@ body {
 
 #content {
   margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
 }
 
 header {
-  position: relative;
-  height: 320px;
   display: grid;
-  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
   justify-items: center;
 }
 
-header::before {
+body::before {
   content: '';
   position: absolute;
   top: 0; 
@@ -33,7 +35,7 @@ header::before {
   height: 100%;
   z-index: -1;
   opacity: .6;  
-  background: no-repeat url("../images/water.png");
+  background: no-repeat url("../images/water.jpg");
 }
 
 h1 {
